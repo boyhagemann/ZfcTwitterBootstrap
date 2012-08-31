@@ -1,49 +1,7 @@
 <?php
 /**
- * Twitter Bootstrap Module
- *
- * @category ZfcTwitterBootstrap 
- * @package  Module
+ * This file is placed here for compatibility with Zendframework 2's ModuleManager.
+ * It allows usage of this module even without composer.
+ * The original Module.php is in 'src/ZfcTwitterBootstrap' in order to respect PSR-0
  */
-
-namespace ZfcTwitterBootstrap;
-
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-
-/**
- * Module Setup
- *
- * @category ZfcTwitterBootstrap
- * @package  Module
- */
-class Module implements AutoloaderProviderInterface
-{    
-    /**
-     * Get Config
-     *
-     * @return array
-     */
-    public function getConfig()
-    {
-        return include __DIR__ . '/config/module.config.php';
-    }
-
-    /**
-     * Set Autoloader Configuration
-     *
-     * @return array
-     */
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\ClassMapAutoloader' => array(
-                __DIR__ . '/autoload_classmap.php',
-            ),
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
-        );
-    }
-}
+require_once __DIR__ . '/src/ZfcTwitterBootstrap/Module.php';
