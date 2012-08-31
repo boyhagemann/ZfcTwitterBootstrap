@@ -17,4 +17,9 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "dev-master"
     },
+    "autoload": {
+        "psr-0": {
+            "ZfcTwitterBootstrap": "src/",
+        }
+    }
 }
